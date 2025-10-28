@@ -41,7 +41,7 @@ void input(void) {
 }
 
 void calculate(int num) {
-    array = malloc(num * sizeof(point));
+    point *array = malloc(num * sizeof(point));
 
     for (int i = 0; i < num; i++) {
         array[i].x = i;
@@ -51,6 +51,6 @@ void calculate(int num) {
 
 void output(int num) {
     for (int i = 0; i < num; i++) {
-        printf("\nCoord %d: (%.0f, %.0f)", i, array[i].x, array[i].y);
+        printf("Coord %d: (%f, %f)", i, array[i].x, array[i].y);
     }
 }
